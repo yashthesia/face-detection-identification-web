@@ -1,0 +1,20 @@
+@keyframes fadein{animation: fadein 2s;
+    from{animation: fadein 2s;
+    opacity:0;
+    }
+    to{animation: fadein 2s;opacity:1;}
+}
+
+
+
+#login{
+	animation: fadein 2s;
+	margin: auto;
+	margin-top: 1%;
+	box-shadow: 2px 5px 105px black;
+	border-radius: 10px;
+	padding: 5px 16px;
+	background: rgba(250,250,250,0.9);
+
+	margin-bottom: 1%;
+	}

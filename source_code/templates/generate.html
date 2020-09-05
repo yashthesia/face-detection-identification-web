@@ -1,0 +1,50 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<title>-->
+        <!--Generate Data - Tornado,Inc.-->
+    <!--</title>-->
+    <!--<link rel="stylesheet" type="text/css" href="/static/login_style.css">-->
+<!--<script>-->
+        <!--myFunc() {-->
+     <!--$("#run").click(function (e) {-->
+        <!--e.preventDefault();-->
+        <!--var href = $(this).attr("href");-->
+        <!--window.location = href;-->
+    <!--});-->
+    <!--$('#run').trigger('click');-->
+<!--});-->
+    <!--</script>-->
+
+<!--</head>-->
+<!--<body background="/static/LoginBg.jpg">-->
+<!--<div id="login">-->
+    <!--<h3>Tornado,Inc.<p>Data Generation Center</p></h3>-->
+    <!--<h3><p style="border-bottom:0px;">Please enter your Name : </p></h3>-->
+    <!--<form method=POST action="{{ url_for('data_gen_train') }}">-->
+        <!--<input name=name>-->
+        <!--<input type="submit" onclick="myFunc()">-->
+    <!--</form>-->
+    <!--<li><a href="/gen/" id="run"></a></li>-->
+    <!--<p>Copyright Tornado,Inc.<sup><i>TM</i></sup> (2017). All Rights Reserved.</p>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+<!Doctype html>
+<html>
+<head>
+    <title>Upload</title>
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/static/input.css">
+</head>
+
+<body background="/static/LoginBg.jpg">
+<div id="login">
+<form method="POST" action="{{ url_for('gen') }}">
+    Please enter Your Name :
+    <input name="uname">
+    <input type="submit">
+</form>
+</div>
+</body>
+</html>

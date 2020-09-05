@@ -1,0 +1,75 @@
+	<!doctype html>
+	<html>
+	<head>
+		<title>
+			SIGNUP - FaceID : Tornado,Inc.
+		</title>
+		<link rel="stylesheet" type="text/css" href="static/signup_style.css">
+	</head>
+		<body background="static/SignupBg.jpg">
+			<div id="signup">
+				<h3>FaceID<p>Hello there Mr.Innovation !</p></h3>
+
+				<form action="http://localhost:8888/ITS/signup.php" method="POST" name="fsignup">
+					
+					<div id="pdetails">	
+						<ul>
+						
+							<li>
+										<label for="fname">First Name : </label>
+										<input name="fname" id="fname"/> 
+							</li>
+						
+						
+							<li >
+								<label for="lname">Last Name : </label>
+								<input name="lname" id="lname"/>  
+							</li>
+						
+							<li>
+								<label for="dob">Date Of Birth : </label>
+								<input type="date" name="dob" id="dob" value="DD/MM/YYYY" /> 
+							</li>
+
+							<li>
+								<label for="email"> E-Mail ID : </label>
+								<input name="email" id="email"/>  
+							</li>
+						
+							<li>
+								<label for="phno">Contact Number : </label>
+								<input name="phno" id="phno"/>  
+							</li>
+							
+
+						
+							<li id="gender">	
+								Male<input type="radio" name="gender" value="male" checked/>
+	        					Female<input type="radio" name="gender" value="female" />
+	        				</li>
+	        			
+						</ul>
+					</div>
+					<div id="ldetails">	
+						<ul>
+							<li>
+								<label for="uname">Username : </label>
+								<input name="uname" id="uname"/>  
+							</li>
+							
+							<li>
+								<label for="pass">Password : </label>
+								<input name="pass" id="pass"/>  
+							</li>
+
+							
+
+						</ul>
+					  </div>
+				<input type="submit" value="Submit" name="signupButton" id="signupButton"/>
+
+			     </form>
+			     		<p id="copyright">Copyright Tornado,Inc.<sup><i>TM</i></sup> (2017). All Rights Reserved.</p>
+			</div>
+		</body>
+	</html>

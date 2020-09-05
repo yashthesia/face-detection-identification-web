@@ -1,0 +1,154 @@
+
+                <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/png">
+    <title>MiniProject 2</title>
+    <style>
+        .booth {
+    /*width: 400px;*/
+    background-color: #ccc;
+    border: 10px solid #ddd;
+    margin: 0 auto;
+}
+
+.output {
+    /*width: 400px;*/
+    background-color: #ccc;
+    border: 10px solid #ddd;
+    margin: 0 auto;
+}
+
+.booth-capture-button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #d62000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.reset-button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #d62000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+@keyframes magic{
+    from{color:transparent;}
+    to{color:white;}
+}
+
+#download{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #d62000;
+    text-align: center;
+    text-decoration: none;
+    color: transparent;
+    animation-name:magic;
+    animation-duration:6s;
+    animation-delay:2s;
+    animation-fill-mode:forwards;
+}
+
+.f{
+    display:none;
+}
+#canvas {
+    display: none;
+}
+    </style>
+
+</head>
+
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <div class="booth">
+                    <video autoplay="true" id="video" width="400" height="300">
+                        Your Browser .. you know...
+                    </video>
+                    <a href="#" id="capture" class="booth-capture-button">Take Photo </a>
+                </div>
+            </td>
+            <td>
+            	<div class="output">
+            		<canvas id="canvas" width="400" height="300">
+                    </canvas>
+                    <img src="{{url_for('static',filename='user_name.jpg')}}" width="400" height="300" id="photo">
+                    <a href="#" id="reset" class="reset-button">Reset</a>
+            	</div>
+            </td>
+        </tr>
+        <tfoot>
+        <a href="#" id="download" class="nameBar" download="userImg.jpg"> Hello, Tirth ! </a>
+        </tfoot>
+    </table>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        (function(){
+	var video = document.getElementById('video'),
+		canvas = document.getElementById('canvas'),
+		context = canvas.getContext('2d'),
+		photo = document.getElementById('photo'),
+	vendorUrl  = window.URL || window.webkitURL;
+
+	navigator.getMedia = navigator.getUserMedia ||
+						 navigator.webkitGetUserMedia ||
+						 navigator.mozGetUserMedia ||
+						 navigator.msGetUserMedia;
+	navigator.getMedia({
+		video: true,
+		audio: false
+	}, function(stream){
+		video.src = vendorUrl.createObjectURL (stream);
+		var playPromise = video  .play();
+		if (playPromise !== undefined) {
+  playPromise.then(function() {
+    // Automatic playback started!
+    setInterval(fetchName(),5000);
+  }).catch(function(error) {
+    // Automatic playback failed.
+    // Show a UI element to let the user manually start playback.
+  });
+}
+	}, function(error){
+		// An error
+		// error.code
+	});
+
+	document.getElementById('capture').addEventListener('click',function(){
+		context.drawImage(video,0,0,400,300);
+		url = canvas.toDataURL('image/png');
+		photo.setAttribute('src', url);
+	});
+
+	document.getElementById('reset').addEventListener('click',function(){
+    	photo.setAttribute('src','{{url_for('static',filename='temp.jpg')}}');
+    	window.alert('Reset Complete.');
+
+    });
+    var button = document.getElementById('download');
+    button.addEventListener('click',function(){
+    	var dataURL = canvas.toDataURL('image/png');
+    	button.href = dataURL;
+    	window.location.href = '/main.html';
+    });
+
+})();
+
+    </script>
+</body>
+
+</html>
+                

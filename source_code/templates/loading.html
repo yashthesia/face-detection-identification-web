@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/png">
+    <title>Analysing the Image</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <style>
+        .loader {
+                margin: 10%;
+                margin-left: 45%;
+                border: 16px solid #FFC107; /* Light grey */
+                border-top: 16px solid #F44336; /* Blue */
+                border-bottom: 16px solid #F44336;
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                animation: spin 2s linear infinite;
+                }
+
+    @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                    }
+    </style>
+    <script>
+        $("document").ready(function() {
+     $("#run").click(function (e) {
+        e.preventDefault();
+        var href = $(this).attr("href");
+        window.location = href;
+    });
+    $('#run').trigger('click');
+});
+    </script>
+</head>
+<body>
+    <h1 align="center">Please wait while the server Analyses the Image</h1>
+    <div class="loader"></div>
+    <li><a href="/yolo-run/" id="run"></a></li>
+</body>
+</html>

@@ -1,0 +1,39 @@
+	<!doctype html>
+	<html>
+	<head>
+		<title>
+			LOGIN - Tornado,Inc.
+		</title>
+		<link rel="stylesheet" type="text/css" href="static/login_style.css">
+	</head>
+		<body background="static/LoginBg.jpg">
+			<div id="login">
+				<h3>Tornado,Inc.<p>Welcome Back  Mr.Innovation !</p></h3>
+
+				<form action="login.php" method="POST">
+					<?php if( isset($status) ) echo $status; ?>						
+						<ul>
+						<li>
+							<label for="uname">Username : </label>
+							<input name="uname" id="uname"/>  
+						</li>
+						<li>
+							<label for="pass">Password : </label>
+							<input type="password" name="pass" id="pass"/>  
+						</li>
+						<li>
+							<input type="submit" value="Login" name="loginButton" id="loginButton"/>
+						</li>
+						</ul>
+				
+
+			     </form>
+
+			     <div id="signup">
+			     		<p><b>New</b> Around Here ?<br>You can always try <b>Signing Up</b>. It's Free <b>:)</b></p>
+			     		<a href="signup.html"><button id="signupButton">SignUp</button></a>
+			     </div>
+			     		<p>Copyright Tornado,Inc.<sup><i>TM</i></sup> (2016). All Rights Reserved.</p>
+			</div>
+		</body>
+	</html>

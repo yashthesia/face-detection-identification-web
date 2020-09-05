@@ -1,0 +1,66 @@
+body{
+	margin: 0;
+	height:720px;
+	width: 1024px;
+	background: transparent;
+	font-family: sans-serif;
+
+}
+
+#introbg {
+	background-repeat: no-repeat;
+	width:1296px;
+	height:736px;
+}
+
+sup {
+	letter-spacing: 0px;
+	font-size: 15px;
+	font-weight: normal;
+	position: relative;
+}
+
+p{
+	position: relative;
+	top: -50px;
+	letter-spacing: 0px;
+	font-weight: normal;
+	font-size: 25px;
+}
+
+#marvel,#login {
+	letter-spacing: -5px;
+	font-weight: bolder;
+	color: white;
+	font-size: 60px;
+	text-align: center;
+	text-shadow: 3px 2px 8px black;
+	padding: 16px;
+	position: absolute;
+}
+
+#marvel {
+	min-width: 600px;
+	width: 0%;
+	height: 200px;
+	top: 0px;
+	left: 10px;	
+	float: left;
+	}
+
+
+
+
+
+#login{
+	height: 260px;
+	min-width: 205px;
+	width: 20%;
+	bottom: 0px;
+	right: 10px;
+	float: right;
+	}
+
+#login:hover{
+	cursor: pointer;
+}

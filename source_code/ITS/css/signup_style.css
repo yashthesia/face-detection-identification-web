@@ -1,0 +1,123 @@
+body{
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	height:720px;
+	font-family: sans-serif;
+
+}
+
+
+
+#copyright,p{	
+	color:#666;
+	text-shadow: none;
+	font-weight: normal;
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+
+
+sup {
+	letter-spacing: 0px;
+	font-size: 7px;
+	font-weight: normal;
+	position: relative;
+}
+
+#copyright {
+	margin-top: 10%;
+
+}
+
+#signup {
+	margin: auto;
+	margin-top: 1%;
+	box-shadow: 2px 5px 105px black;
+	border-radius: 10px;
+	padding: 5px 16px;
+	background: rgba(250,250,250,0.9);
+	min-width: 400px;
+	width: 50%;
+	min-height:650px;
+	margin-bottom: 1%;
+
+
+}
+
+#signup h3{
+
+	padding: 10px;
+	padding-top: 0px;
+	font-family: sans-serif;
+	font-weight: bold;
+	border-bottom-style: solid;
+	border-width: 2px;
+	color: black;
+	text-shadow: 3px 3px 3px skyblue;
+	font-size: 40px;
+
+}
+
+#signup input {
+
+		width: 25%;
+		height: 15px;
+		border-radius: 3px;
+}
+
+#signup #signupButton {
+		font-family: sans-serif;
+		font-weight: bolder;
+		font-size: 15px;
+		color: white;
+		position: relative;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		background: green;
+		width: 200px;
+		height: 40px;
+		border-radius: 5px;
+}
+
+#signupButton:hover{
+	cursor: pointer;
+}
+
+#signup #pdetails {
+		padding: 10px;
+		margin-bottom: 10px;
+		border-bottom-style: solid;
+		border-width: 1px;
+		}
+
+#signup #ldetails {
+		padding: 10px;
+		 
+}
+
+
+#signup #gender{
+		position: relative;
+		left: 10%;
+}
+
+#signup ul{
+
+	text-align: left;
+	color:#555;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	padding:0;
+	font-size: 20px;
+}
+
+#signup ul li{
+	padding: 0;
+	text-align: center;
+		list-style: none;
+		line-height: 60px;
+}
