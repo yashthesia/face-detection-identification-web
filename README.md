@@ -1,6 +1,9 @@
 # Project definition
 FaceID | Yolo | Dataset Generation
 
+<img src="https://github.com/yashthesia/face-detection-identification-web/blob/master/source_code/demo%201.png" width="220" /><img src="https://github.com/yashthesia/face-detection-identification-web/blob/master/source_code/demo%202.png" width="220" />
+
+<img src="https://github.com/yashthesia/face-detection-identification-web/blob/master/source_code/demo%203.png" width="250" height = '200' /><img src="https://github.com/yashthesia/face-detection-identification-web/blob/master/source_code/demo%204.png" width="200" />
 
 # Presented by
 15BCE126 – Yash Thesia
