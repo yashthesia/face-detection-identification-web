@@ -1,5 +1,5 @@
 # Project definition
-##FaceID | Yolo | Dataset Generation
+FaceID | Yolo | Dataset Generation
 
 
 # Presented by
